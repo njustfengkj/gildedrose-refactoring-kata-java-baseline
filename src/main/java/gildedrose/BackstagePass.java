@@ -1,7 +1,7 @@
 package gildedrose;
 
 public class BackstagePass extends Item {
-    public BackstagePass(int sellIn, int quality) {
+    BackstagePass(int sellIn, int quality) {
         super("Backstage passes to a TAFKAL80ETC concert", sellIn, quality);
     }
 
@@ -26,7 +26,7 @@ public class BackstagePass extends Item {
         sellIn = sellIn - 1;
 
         if (sellIn < 0) {
-            quality = quality - quality;
+            quality = 0;
         }
     }
 }

@@ -2,11 +2,11 @@ package gildedrose;
 
 public class Item {
 
-    public String name;
+    private String name;
 
-    public int sellIn;
+    int sellIn;
 
-    public int quality;
+    int quality;
 
     Item(String name, int sellIn, int quality) {
         this.name = name;
@@ -14,7 +14,7 @@ public class Item {
         this.quality = quality;
     }
 
-    public static Item createItem(String name, int sellIn, int quality) {
+    static Item createItem(String name, int sellIn, int quality) {
         switch (name) {
             case "Aged Brie":
                 return new AgedBrie(sellIn, quality);
